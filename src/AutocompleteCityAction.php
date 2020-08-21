@@ -1,15 +1,13 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces;
-
 
 use Sfneal\GooglePlaces\Actions\Abstracts\PlacesSearchAction;
 
 class AutocompleteCityAction extends PlacesSearchAction
 {
     /**
-     * Parse the Google Places API response and return an array
+     * Parse the Google Places API response and return an array.
      *
      * @param $response
      * @return array

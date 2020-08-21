@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Actions\Abstracts;
-
 
 use Sfneal\Actions\AbstractAction;
 use Sfneal\GooglePlaces\Actions\CurlRequestAction;
@@ -58,34 +56,36 @@ abstract class PlacesSearchAction extends AbstractAction
     }
 
     /**
-     * Retrieve the API endpoint for a google places AutocompleteCity search
+     * Retrieve the API endpoint for a google places AutocompleteCity search.
      *
      * @return string
      */
-    public function getEndpoint(): string {
-        $endpoint = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' . $this->query;
+    public function getEndpoint(): string
+    {
+        $endpoint = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input='.$this->query;
         $endpoint .= '&types=(regions)';
         $endpoint .= '&region=us';
 
         // Add location bias if set
         if (isset($this->location_bias_coords)) {
-            $endpoint .= '&location=' . str_replace(' ', '', $this->location_bias_coords);
+            $endpoint .= '&location='.str_replace(' ', '', $this->location_bias_coords);
         }
 
         // Add radius bias if set
         if (isset($this->radius_bias)) {
-            $endpoint .= '&radius=' . $this->radius_bias;
+            $endpoint .= '&radius='.$this->radius_bias;
         }
 
         // Add language
         $endpoint .= '&language=en_EN';
-        $endpoint .= '&components=country:' . $this->country;
-        $endpoint .= '&key=' . env('GOOGLE_API_KEY');
+        $endpoint .= '&components=country:'.$this->country;
+        $endpoint .= '&key='.env('GOOGLE_API_KEY');
+
         return $endpoint;
     }
 
     /**
-     * Parse the Google Places API response to retrieve results set
+     * Parse the Google Places API response to retrieve results set.
      *
      * @param $response
      * @return array|string
@@ -93,21 +93,23 @@ abstract class PlacesSearchAction extends AbstractAction
     abstract public function parseResponse($response);
 
     /**
-     * Remove spaces and forbidden characters from query string
+     * Remove spaces and forbidden characters from query string.
      *
      * @param $query
      * @return string|string[]
      */
-    private static function sanitize($query) {
+    private static function sanitize($query)
+    {
         return str_replace(' ', '-', $query);
     }
 
     /**
-     * Retrieve the API URL endpoint, cURL execute the request and return response
+     * Retrieve the API URL endpoint, cURL execute the request and return response.
      *
      * @return mixed
      */
-    public function execute() {
+    public function execute()
+    {
         return $this->parseResponse(CurlRequestAction::execute($this->getEndpoint()));
     }
 }

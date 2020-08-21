@@ -1,34 +1,34 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Actions\Traits;
-
 
 trait States
 {
     // todo: add use of sushi package
 
     /**
-     * Retrieve a state's abbreviation from its full name
+     * Retrieve a state's abbreviation from its full name.
      *
      * @param string $state_name
      * @return string
      */
-    private static function stateAbbreviation(string $state_name): string {
+    private static function stateAbbreviation(string $state_name): string
+    {
         return self::$states[$state_name];
     }
 
     /**
-     * Retrieve an array of state name keys & state abbreviation values
+     * Retrieve an array of state name keys & state abbreviation values.
      *
      * @return array
      */
-    private static function states(): array {
+    private static function states(): array
+    {
         return self::$states;
     }
 
     /**
-     * Array of State name keys & abbreviation values
+     * Array of State name keys & abbreviation values.
      *
      * @var array
      */
@@ -82,6 +82,6 @@ trait States
         'Washington'=>'WA',
         'West Virginia'=>'WV',
         'Wisconsin'=>'WI',
-        'Wyoming'=>'WY'
+        'Wyoming'=>'WY',
     ];
 }

@@ -9,7 +9,7 @@ use Sfneal\Controllers\AbstractController;
 class PlacesController extends AbstractController
 {
     /**
-     * Execute a Google Place API city search
+     * Execute a Google Place API city search.
      *
      * @param Request $request
      * @return JsonResponse
@@ -20,7 +20,7 @@ class PlacesController extends AbstractController
     }
 
     /**
-     * Execute a Google Place API zip search
+     * Execute a Google Place API zip search.
      *
      * @param Request $request
      * @return JsonResponse

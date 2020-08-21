@@ -1,18 +1,18 @@
-# Very short description of the package
+# Google Places
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/php-package-boilerplate.svg?style=flat-square)](https://packagist.org/packages/sfneal/php-package-boilerplate)
-[![Build Status](https://img.shields.io/travis/sfneal/php-package-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/sfneal/php-package-boilerplate)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/php-package-boilerplate.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/php-package-boilerplate)
-[![Total Downloads](https://img.shields.io/packagist/dt/sfneal/php-package-boilerplate.svg?style=flat-square)](https://packagist.org/packages/sfneal/php-package-boilerplate)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/google-places.svg?style=flat-square)](https://packagist.org/packages/sfneal/google-places)
+[![Build Status](https://img.shields.io/travis/sfneal/google-places/master.svg?style=flat-square)](https://travis-ci.org/sfneal/google-places)
+[![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/google-places.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/google-places)
+[![Total Downloads](https://img.shields.io/packagist/dt/sfneal/google-places.svg?style=flat-square)](https://packagist.org/packages/sfneal/google-places)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Actions & Controllers for interacting with the Google Places API through Laravel applications
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require sfneal/php-package-boilerplate
+composer require sfneal/google-places
 ```
 
 ## Usage

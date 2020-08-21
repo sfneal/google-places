@@ -1,12 +1,10 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Controllers;
+namespace Sfneal\GooglePlaces;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Sfneal\Controllers\AbstractController;
-use Sfneal\GooglePlaces\Actions\AutocompleteCityAction;
-use Sfneal\GooglePlaces\Actions\AutocompleteZipAction;
 
 class PlacesController extends AbstractController
 {

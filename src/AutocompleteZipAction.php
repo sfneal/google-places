@@ -1,10 +1,11 @@
 <?php
 
 
-namespace Sfneal\GooglePlaces\Actions;
+namespace Sfneal\GooglePlaces;
 
 
 use Sfneal\GooglePlaces\Actions\Abstracts\PlacesSearchAction;
+use Sfneal\GooglePlaces\Actions\ZipFromPlaceIdAction;
 
 class AutocompleteZipAction extends PlacesSearchAction
 {

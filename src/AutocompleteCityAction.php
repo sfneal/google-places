@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sfneal\GooglePlaces\Actions;
+namespace Sfneal\GooglePlaces;
 
 
 use Sfneal\GooglePlaces\Actions\Abstracts\PlacesSearchAction;

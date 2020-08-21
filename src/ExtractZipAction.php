@@ -1,16 +1,13 @@
 <?php
 
 
-namespace Sfneal\GooglePlaces\Actions;
+namespace Sfneal\GooglePlaces;
 
 
 use Sfneal\Actions\AbstractActionStatic;
-use Sfneal\GooglePlaces\Actions\Traits\States;
 
-class ExtractCityStateAction extends AbstractActionStatic
+class ExtractZipAction extends AbstractActionStatic
 {
-    use States;
-
     /**
      * Extract a (city, state) string from a google places API return that may contain a zip code
      *
@@ -28,11 +25,10 @@ class ExtractCityStateAction extends AbstractActionStatic
             if (strlen(trim($state)) > 2 && strpos($state, ' ') !== false) {
                 // Extract the zip code
                 list($state, $zip) = explode(' ', $state);
+                return $zip;
             }
-            return [$city, $state];
 
-        } else {
-            return ['', self::stateAbbreviation($description)];
         }
+        return null;
     }
 }

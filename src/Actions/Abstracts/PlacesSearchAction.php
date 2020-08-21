@@ -10,16 +10,19 @@ use Sfneal\GooglePlaces\Actions\CurlRequestAction;
 abstract class PlacesSearchAction extends AbstractAction
 {
     /**
-     * todo: make this optional
-     * Longitude & Latitude of the location biases (Milford, MA)
+     * @var array Longitude & Latitude of the location biases (Milford, MA)
      */
-    protected const LOCATION_BIAS_COORDINATES = [42.1399, -71.5163];
+    private $location_bias_coords;
 
     /**
-     * todo: make this optional
-     * A radius in miles from location bias coordinates
+     * @var int A radius in miles from location bias coordinates
      */
-    protected const RADIUS = 500;
+    private $radius_bias;
+
+    /**
+     * @var string Google places country code (defaults to 'us')
+     */
+    private $country;
 
     /**
      * @var string Query parameters
@@ -44,8 +47,14 @@ abstract class PlacesSearchAction extends AbstractAction
      */
     public function __construct(string $query, $place_id = null)
     {
+        // Set params
         $this->query = self::sanitize($query);
         $this->place_id = $place_id;
+
+        // Set optional env values
+        $this->location_bias_coords = env('GOOGLE_PLACES_LOCATION_BIAS_COORD');
+        $this->radius_bias = env('GOOGLE_PLACES_RADIUS');
+        $this->country = env('GOOGLE_PLACES_COUNTRY', 'us');
     }
 
     /**
@@ -57,10 +66,20 @@ abstract class PlacesSearchAction extends AbstractAction
         $endpoint = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=' . $this->query;
         $endpoint .= '&types=(regions)';
         $endpoint .= '&region=us';
-        $endpoint .= '&location=' . implode(',', self::LOCATION_BIAS_COORDINATES);
-        $endpoint .= '&radius=' . self::RADIUS;
+
+        // Add location bias if set
+        if (isset($this->location_bias_coords)) {
+            $endpoint .= '&location=' . str_replace(' ', '', $this->location_bias_coords);
+        }
+
+        // Add radius bias if set
+        if (isset($this->radius_bias)) {
+            $endpoint .= '&radius=' . $this->radius_bias;
+        }
+
+        // Add language
         $endpoint .= '&language=en_EN';
-        $endpoint .= '&components=country:us';
+        $endpoint .= '&components=country:' . $this->country;
         $endpoint .= '&key=' . env('GOOGLE_API_KEY');
         return $endpoint;
     }

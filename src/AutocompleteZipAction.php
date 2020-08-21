@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces;
-
 
 use Sfneal\GooglePlaces\Actions\Abstracts\PlacesSearchAction;
 use Sfneal\GooglePlaces\Actions\ZipFromPlaceIdAction;
@@ -10,7 +8,7 @@ use Sfneal\GooglePlaces\Actions\ZipFromPlaceIdAction;
 class AutocompleteZipAction extends PlacesSearchAction
 {
     /**
-     * Parse the Google Places API response and return an array
+     * Parse the Google Places API response and return an array.
      *
      * @param $response
      * @return array

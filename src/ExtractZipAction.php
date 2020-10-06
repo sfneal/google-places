@@ -17,12 +17,12 @@ class ExtractZipAction extends AbstractActionStatic
         // Check that the place description contains a comma string
         if (strpos($description, ', ') !== false) {
             // Separate city and state strings
-            [$city, $state] = explode(', ', $description);
+            list($city, $state) = explode(', ', $description);
 
             // Check if the state string contains more than a state code
             if (strlen(trim($state)) > 2 && strpos($state, ' ') !== false) {
                 // Extract the zip code
-                [$state, $zip] = explode(' ', $state);
+                list($state, $zip) = explode(' ', $state);
 
                 return $zip;
             }

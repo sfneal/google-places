@@ -16,3 +16,7 @@ All notable changes to `google-places` will be documented in this file
 
 ## 0.3.1 - 2020-10-07
 - bump sfneal package versions & phpunit min version
+
+
+## 0.3.2 - 2020-10-07
+- fix sfneal/action package versions

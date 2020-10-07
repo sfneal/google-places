@@ -9,5 +9,10 @@ All notable changes to `google-places` will be documented in this file
 ## 0.2.0 - 2020-09-14
 - add support for laravel 8
 
+
 ## 0.3.0 - 2020-10-06
 - add support for php 7.0
+
+
+## 0.3.1 - 2020-10-07
+- bump sfneal package versions & phpunit min version

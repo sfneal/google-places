@@ -19,7 +19,7 @@
         "php": "^7.0",
         "ext-curl": "*",
         "ext-json": "*",
-        "sfneal/actions": ">=0.3.0",
+        "sfneal/actions": ">=0.2.1",
         "sfneal/controllers": ">=0.3.0"
     },
     "require-dev": {

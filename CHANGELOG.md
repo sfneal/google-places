@@ -20,3 +20,7 @@ All notable changes to `google-places` will be documented in this file
 
 ## 0.3.2 - 2020-10-07
 - fix sfneal/action package versions
+
+
+## 0.4.0 - 2020-11-30
+- add php8 compatibility

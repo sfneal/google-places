@@ -27,4 +27,4 @@ All notable changes to `google-places` will be documented in this file
 
 
 ## 0.4.1 - 2020-12-11
-- add php8 compatibility
+- fix php8 compatibility

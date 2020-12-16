@@ -31,7 +31,7 @@ class ZipFromPlaceIdAction extends PlacesSearchAction
      * @param $response
      * @return string
      */
-    public function parseResponse($response)
+    public function parseResponse($response): string
     {
         // Parse predictions
         foreach ($response['result']['address_components'] as $res) {

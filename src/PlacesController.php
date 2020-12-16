@@ -14,7 +14,7 @@ class PlacesController extends AbstractController
      * @param Request $request
      * @return JsonResponse
      */
-    public function city(Request $request)
+    public function city(Request $request): JsonResponse
     {
         return response()->json((new AutocompleteCityAction($request->input('q')))->execute());
     }
@@ -25,7 +25,7 @@ class PlacesController extends AbstractController
      * @param Request $request
      * @return JsonResponse
      */
-    public function zip(Request $request)
+    public function zip(Request $request): JsonResponse
     {
         return response()->json((new AutocompleteZipAction($request->input('q')))->execute());
     }

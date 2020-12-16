@@ -4,8 +4,6 @@ namespace Sfneal\GooglePlaces\Actions\Traits;
 
 trait States
 {
-    // todo: add use of sushi package
-
     /**
      * Retrieve a state's abbreviation from its full name.
      *

@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "ext-curl": "*",
         "ext-json": "*",
         "sfneal/actions": ">=0.2.1",

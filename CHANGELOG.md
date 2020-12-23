@@ -32,3 +32,7 @@ All notable changes to `google-places` will be documented in this file
 
 ## 0.4.2 - 2020-12-16
 - add improved type hinting
+
+
+## 0.4.3 - 2020-12-23
+- fix changelog

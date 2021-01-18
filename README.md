@@ -1,7 +1,8 @@
 # Google Places
 
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/google-places)](https://packagist.org/packages/sfneal/google-places)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/google-places.svg?style=flat-square)](https://packagist.org/packages/sfneal/google-places)
-[![Build Status](https://img.shields.io/travis/sfneal/google-places/master.svg?style=flat-square)](https://travis-ci.org/sfneal/google-places)
+[![Build Status](https://travis-ci.com/sfneal/google-places.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/google-places)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/google-places.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/google-places)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/google-places.svg?style=flat-square)](https://packagist.org/packages/sfneal/google-places)
 

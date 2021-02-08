@@ -31,7 +31,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            GooglePlacesServiceProvider::class
+            GooglePlacesServiceProvider::class,
         ];
     }
 

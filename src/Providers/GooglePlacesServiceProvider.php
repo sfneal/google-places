@@ -18,7 +18,7 @@ class GooglePlacesServiceProvider extends ServiceProvider
             __DIR__.'/../../config/google-places.php' => base_path('config/google-places.php'),
         ], 'config');
 
-        // Map health check paths
+        // Map places routes check paths
         $this->loadRoutesFrom(__DIR__.'/../../routes/google-places.php');
 
     }

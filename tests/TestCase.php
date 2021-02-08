@@ -9,6 +9,20 @@ use Sfneal\GooglePlaces\Providers\GooglePlacesServiceProvider;
 class TestCase extends OrchestraTestCase
 {
     /**
+     * Define environment setup.
+     *
+     * @param Application $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('google-places.api_key', 'AIzaSyD-W-8zOqMwzJ1UgTN3fEPNNxjg40AajDY');
+        $app['config']->set('google-places.location_bias', '42.1399, -71.5163');
+        $app['config']->set('google-places.radius', '500');
+        $app['config']->set('google-places.country', 'us');
+    }
+
+    /**
      * Register package service providers.
      *
      * @param Application $app

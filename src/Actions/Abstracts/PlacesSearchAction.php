@@ -50,9 +50,9 @@ abstract class PlacesSearchAction extends AbstractAction
         $this->place_id = $place_id;
 
         // Set optional env values
-        $this->location_bias_coords = env('GOOGLE_PLACES_LOCATION_BIAS_COORD');
-        $this->radius_bias = env('GOOGLE_PLACES_RADIUS');
-        $this->country = env('GOOGLE_PLACES_COUNTRY', 'us');
+        $this->location_bias_coords = config('google-places.location_bias');
+        $this->radius_bias = config('google-places.radius');
+        $this->country = config('google-places.country');
     }
 
     /**
@@ -79,7 +79,7 @@ abstract class PlacesSearchAction extends AbstractAction
         // Add language
         $endpoint .= '&language=en_EN';
         $endpoint .= '&components=country:'.$this->country;
-        $endpoint .= '&key='.env('GOOGLE_API_KEY');
+        $endpoint .= '&key='.config('google-places.api_key');
 
         return $endpoint;
     }

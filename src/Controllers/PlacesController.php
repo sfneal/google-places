@@ -5,8 +5,8 @@ namespace Sfneal\GooglePlaces\Controllers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Sfneal\Controllers\AbstractController;
-use Sfneal\GooglePlaces\AutocompleteCityAction;
-use Sfneal\GooglePlaces\AutocompleteZipAction;
+use Sfneal\GooglePlaces\Actions\AutocompleteCityAction;
+use Sfneal\GooglePlaces\Actions\AutocompleteZipAction;
 
 class PlacesController extends AbstractController
 {

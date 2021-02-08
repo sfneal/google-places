@@ -1,11 +1,10 @@
 <?php
 
-namespace Sfneal\GooglePlaces;
+namespace Sfneal\GooglePlaces\Actions;
 
 use Sfneal\GooglePlaces\Actions\Abstracts\PlacesSearchAction;
-use Sfneal\GooglePlaces\Actions\ZipFromPlaceIdAction;
 
-class AutocompleteZipAction extends PlacesSearchAction
+class AutocompleteCityAction extends PlacesSearchAction
 {
     /**
      * Parse the Google Places API response and return an array.
@@ -16,11 +15,12 @@ class AutocompleteZipAction extends PlacesSearchAction
     public function parseResponse($response): array
     {
         // Parse predictions
+        $i = 0;
         foreach ($response['predictions'] as $res) {
-            $this->results[] = array_fill_keys(
-                ['id', 'text'],
-                (new ZipFromPlaceIdAction($this->query, $res['place_id']))->execute()
-            );
+            $this->results[$i]['id'] = $res['description'];
+            $this->results[$i]['text'] = $res['description'];
+            $this->results[$i]['place_id'] = $res['place_id'];
+            $i++;
         }
 
         return [

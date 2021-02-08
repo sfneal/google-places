@@ -9,7 +9,7 @@ use Sfneal\GooglePlaces\Autocomplete;
 class AutocompleteTest extends TestCase
 {
     /** @test */
-    public function autocomplete_city()
+    public function city()
     {
         $this->contentAssertions(Autocomplete::city('franklin'), 5);
         $this->contentAssertions(Autocomplete::city('02038'), 1);
@@ -17,7 +17,7 @@ class AutocompleteTest extends TestCase
     }
 
     /** @test */
-    public function autocomplete_zip()
+    public function zip()
     {
         $this->contentAssertions(Autocomplete::zip('0203'), 4, ['id', 'text']);
         $this->contentAssertions(Autocomplete::zip('02038'), 1, ['id', 'text']);

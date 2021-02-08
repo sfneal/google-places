@@ -36,7 +36,7 @@ class TestCase extends OrchestraTestCase
     }
 
     /**
-     * Execute response assertions for route test methods
+     * Execute response assertions for route test methods.
      *
      * @param string $uri
      * @param int $expectedResults
@@ -50,7 +50,7 @@ class TestCase extends OrchestraTestCase
         // Run assertions on the response
         $response
             ->assertJson([
-                'total_count' => $expectedResults
+                'total_count' => $expectedResults,
             ])
             ->assertStatus(200);
 
@@ -59,7 +59,7 @@ class TestCase extends OrchestraTestCase
     }
 
     /**
-     * Execute content assertions
+     * Execute content assertions.
      *
      * @param array $content
      * @param int $expectedResults

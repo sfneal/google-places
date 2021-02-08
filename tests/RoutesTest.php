@@ -10,6 +10,7 @@ class RoutesTest extends TestCase
     public function city_route_can_be_accessed()
     {
         $this->responseAssertions(route('places.city', ['q' => 'franklin']), 5);
+        $this->responseAssertions(route('places.city', ['q' => 'boston']), 5);
         $this->responseAssertions(route('places.city', ['q' => '02038']), 1);
     }
 

@@ -38,9 +38,9 @@ class Extract extends AbstractService
      * Extract a zip code string from a google places API return that may contain a zip code.
      *
      * @param string $description
-     * @return array
+     * @return string
      */
-    public static function zip(string $description): ?array
+    public static function zip(string $description): ?string
     {
         // Check that the place description contains a comma string
         if (strpos($description, ', ') !== false) {

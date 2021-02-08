@@ -39,5 +39,12 @@ All notable changes to `google-places` will be documented in this file
 
 
 ## 0.5.0 - 2021-02-08
-- make Autocomplete service for executing place queries
 - make Extract service for extracting city, state & zip codes from a google place query return
+- make Autocomplete service for executing place queries
+
+
+## 0.6.0 - 2021-02-08
+- initial production release
+- add ServiceProvider for publishing configs & routes
+- add test suite for testing Google Places API functionality as well as Autocomplete & Extract services
+- fix issues with return type hinting

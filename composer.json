@@ -23,11 +23,19 @@
         "sfneal/controllers": ">=1.0"
     },
     "require-dev": {
+        "orchestra/testbench": ">=3.8.0",
         "phpunit/phpunit": ">=6.5.14"
     },
     "autoload": {
         "psr-4": {
             "Sfneal\\GooglePlaces\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sfneal\\GooglePlaces\\Providers\\GooglePlacesServiceProvider"
+            ]
         }
     },
     "autoload-dev": {

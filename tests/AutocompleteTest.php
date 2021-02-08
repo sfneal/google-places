@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Tests;
-
 
 use Sfneal\GooglePlaces\Autocomplete;
 

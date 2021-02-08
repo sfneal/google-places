@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Tests;
-
 
 use Sfneal\GooglePlaces\Extract;
 
@@ -16,7 +14,7 @@ class ExtractTest extends TestCase
     /** @test */
     public function cityState()
     {
-        list($city, $state) = Extract::cityState($this->description);
+        [$city, $state] = Extract::cityState($this->description);
 
         $this->assertEquals('Franklin', $city);
         $this->assertEquals('MA', $state);

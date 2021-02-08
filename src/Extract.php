@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces;
-
 
 use Sfneal\Actions\AbstractService;
 use Sfneal\GooglePlaces\Actions\Traits\States;
@@ -62,7 +60,7 @@ class Extract extends AbstractService
     }
 
     /**
-     * Extract a city from a google places API return
+     * Extract a city from a google places API return.
      *
      * @param string $description
      * @return string|null
@@ -73,7 +71,7 @@ class Extract extends AbstractService
     }
 
     /**
-     * Extract a state from a google places API return
+     * Extract a state from a google places API return.
      *
      * @param string $description
      * @return string|null

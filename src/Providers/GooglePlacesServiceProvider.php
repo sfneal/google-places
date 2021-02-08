@@ -20,7 +20,6 @@ class GooglePlacesServiceProvider extends ServiceProvider
 
         // Map places routes check paths
         $this->loadRoutesFrom(__DIR__.'/../../routes/google-places.php');
-
     }
 
     /**

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Tests;
-
 
 class RoutesTest extends TestCase
 {
@@ -20,7 +18,7 @@ class RoutesTest extends TestCase
     }
 
     /**
-     * Execute assertions for route test methods
+     * Execute assertions for route test methods.
      *
      * @param string $uri
      * @param int $expectedResults
@@ -34,7 +32,7 @@ class RoutesTest extends TestCase
         // Run assertions on the response
         $response
             ->assertJson([
-                'total_count' => $expectedResults
+                'total_count' => $expectedResults,
             ])
             ->assertStatus(200);
 

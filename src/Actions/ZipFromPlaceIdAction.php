@@ -20,7 +20,7 @@ class ZipFromPlaceIdAction extends PlacesSearchAction
         $endpoint .= '&language=en_EN';
         $endpoint .= '&region=us';
         $endpoint .= '&fields=address_component';
-        $endpoint .= '&key=' . config('google-places.api_key');
+        $endpoint .= '&key='.config('google-places.api_key');
 
         return $endpoint;
     }

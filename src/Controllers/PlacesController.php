@@ -5,8 +5,7 @@ namespace Sfneal\GooglePlaces\Controllers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Sfneal\Controllers\AbstractController;
-use Sfneal\GooglePlaces\Actions\AutocompleteCityAction;
-use Sfneal\GooglePlaces\Actions\AutocompleteZipAction;
+use Sfneal\GooglePlaces\Autocomplete;
 
 class PlacesController extends AbstractController
 {
@@ -18,7 +17,7 @@ class PlacesController extends AbstractController
      */
     public function city(Request $request): JsonResponse
     {
-        return response()->json((new AutocompleteCityAction($request->input('q')))->execute());
+        return response()->json(Autocomplete::city($request->input('q')));
     }
 
     /**
@@ -29,6 +28,6 @@ class PlacesController extends AbstractController
      */
     public function zip(Request $request): JsonResponse
     {
-        return response()->json((new AutocompleteZipAction($request->input('q')))->execute());
+        return response()->json(Autocomplete::zip($request->input('q')));
     }
 }

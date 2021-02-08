@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces;
-
 
 use Sfneal\Actions\AbstractService;
 use Sfneal\GooglePlaces\Actions\AutocompleteCityAction;
@@ -11,7 +9,7 @@ use Sfneal\GooglePlaces\Actions\AutocompleteZipAction;
 class Autocomplete extends AbstractService
 {
     /**
-     * Autocomplete a 'city' name query
+     * Autocomplete a 'city' name query.
      *
      * @param string $query
      * @return array|mixed|string
@@ -22,7 +20,7 @@ class Autocomplete extends AbstractService
     }
 
     /**
-     * Autocomplete a 'zip code' query
+     * Autocomplete a 'zip code' query.
      *
      * @param string $query
      * @return array|mixed|string

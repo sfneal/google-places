@@ -36,22 +36,46 @@ class TestCase extends OrchestraTestCase
     }
 
     /**
-     * Setup the test environment.
+     * Execute response assertions for route test methods
      *
-     * @return void
+     * @param string $uri
+     * @param int $expectedResults
+     * @param array $contentKeys
      */
-    protected function setUp(): void
+    protected function responseAssertions(string $uri, int $expectedResults, array $contentKeys = ['id', 'text', 'place_id']): void
     {
-        parent::setUp();
+        // Get request the route
+        $response = $this->get($uri);
+
+        // Run assertions on the response
+        $response
+            ->assertJson([
+                'total_count' => $expectedResults
+            ])
+            ->assertStatus(200);
+
+        // Extract & decode content from response
+        $this->contentAssertions((array) json_decode($response->content(), true), $expectedResults, $contentKeys);
     }
 
     /**
-     * Clean up the testing environment before the next test.
+     * Execute content assertions
      *
-     * @return void
+     * @param array $content
+     * @param int $expectedResults
+     * @param array|string[] $contentKeys
      */
-    protected function tearDown(): void
+    protected function contentAssertions(array $content, int $expectedResults, array $contentKeys = ['id', 'text', 'place_id']): void
     {
-        parent::tearDown();
+        // Run assertions on the responses content
+        $this->assertArrayHasKey('total_count', $content);
+        $this->assertArrayHasKey('items', $content);
+        $this->assertCount($expectedResults, $content['items']);
+        foreach ($content['items'] as $item) {
+            foreach ($contentKeys as $key) {
+                $this->assertArrayHasKey($key, $item);
+                $this->assertIsString($item[$key]);
+            }
+        }
     }
 }

@@ -43,7 +43,7 @@ All notable changes to `google-places` will be documented in this file
 - make Autocomplete service for executing place queries
 
 
-## 1.0.0 - 2021-02-08
+## 0.6.0 - 2021-02-08
 - initial production release
 - add ServiceProvider for publishing configs & routes
 - add test suite for testing Google Places API functionality as well as Autocomplete & Extract services

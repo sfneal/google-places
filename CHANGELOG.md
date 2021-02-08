@@ -36,3 +36,8 @@ All notable changes to `google-places` will be documented in this file
 
 ## 0.4.3 - 2020-12-23
 - fix changelog
+
+
+## 0.5.0 - 2020-02-08
+- make Autocomplete service for executing place queries
+- make Extract service for extracting city, state & zip codes from a google place query return

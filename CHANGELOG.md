@@ -52,3 +52,8 @@ All notable changes to `google-places` will be documented in this file
 ## 1.0.0 - 2021-02-08
 - initial production release
 - updated documentation
+
+
+## 1.0.1 - 2021-03-30
+- fix sfneal/actions & sfneal/controllers version syntax
+- fix Travis CI config to enable code coverage uploads

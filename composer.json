@@ -19,12 +19,13 @@
         "php": ">=7.1",
         "ext-curl": "*",
         "ext-json": "*",
-        "sfneal/actions": ">=1.0",
-        "sfneal/controllers": ">=1.0"
+        "sfneal/actions": "^1.0",
+        "sfneal/controllers": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": ">=3.8.0",
-        "phpunit/phpunit": ">=6.5.14"
+        "phpunit/phpunit": ">=6.5.14",
+        "scrutinizer/ocular": "^1.8"
     },
     "autoload": {
         "psr-4": {
@@ -46,6 +47,7 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "upload-coverage": "php vendor/bin/ocular code-coverage:upload --format=php-clover phpunit.xml.dist",
         "update-test": "composer --prefer-stable update && composer test && composer update --prefer-lowest && composer test && composer update"
     },
     "config": {

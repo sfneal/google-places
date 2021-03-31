@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Sfneal\GooglePlaces\PlacesController;
+use Sfneal\GooglePlaces\Controllers\PlacesController;
 
 // Declare places routes
 Route::prefix('places')->name('places.')->group(function () {

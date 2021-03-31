@@ -1,10 +1,11 @@
 <?php
 
-namespace Sfneal\GooglePlaces;
+namespace Sfneal\GooglePlaces\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Sfneal\Controllers\AbstractController;
+use Sfneal\GooglePlaces\Autocomplete;
 
 class PlacesController extends AbstractController
 {

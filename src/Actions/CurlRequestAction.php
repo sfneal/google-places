@@ -2,9 +2,9 @@
 
 namespace Sfneal\GooglePlaces\Actions;
 
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 
-class CurlRequestAction extends AbstractAction
+class CurlRequestAction extends Action
 {
     /**
      * @var string

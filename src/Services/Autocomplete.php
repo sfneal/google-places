@@ -2,11 +2,10 @@
 
 namespace Sfneal\GooglePlaces\Services;
 
-use Sfneal\Actions\AbstractService;
 use Sfneal\GooglePlaces\Actions\AutocompleteCityAction;
 use Sfneal\GooglePlaces\Actions\AutocompleteZipAction;
 
-class Autocomplete extends AbstractService
+class Autocomplete
 {
     /**
      * Autocomplete a 'city' name query.

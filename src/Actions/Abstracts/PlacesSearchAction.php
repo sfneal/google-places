@@ -2,10 +2,10 @@
 
 namespace Sfneal\GooglePlaces\Actions\Abstracts;
 
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 use Sfneal\GooglePlaces\Actions\CurlRequestAction;
 
-abstract class PlacesSearchAction extends AbstractAction
+abstract class PlacesSearchAction extends Action
 {
     /**
      * @var array Longitude & Latitude of the location biases (Milford, MA)

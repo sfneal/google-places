@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\GooglePlaces;
+namespace Sfneal\GooglePlaces\Services;
 
 use Sfneal\Actions\AbstractService;
 use Sfneal\GooglePlaces\Actions\Traits\States;

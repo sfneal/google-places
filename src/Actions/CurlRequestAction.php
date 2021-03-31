@@ -2,22 +2,36 @@
 
 namespace Sfneal\GooglePlaces\Actions;
 
-use Sfneal\Actions\AbstractActionStatic;
+use Sfneal\Actions\AbstractAction;
 
-class CurlRequestAction extends AbstractActionStatic
+class CurlRequestAction extends AbstractAction
 {
+    /**
+     * @var string
+     */
+    private $endpoint;
+
+    /**
+     * CurlRequestAction constructor.
+     *
+     * @param string $endpoint
+     */
+    public function __construct(string $endpoint)
+    {
+        $this->endpoint = $endpoint;
+    }
+
     /**
      * Execute the cURL request and JSON decode the result.
      *
-     * @param string $endpoint
      * @return mixed
      */
-    public static function execute(string $endpoint)
+    public function execute()
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, $endpoint);
+        curl_setopt($ch, CURLOPT_URL, $this->endpoint);
         $result = curl_exec($ch);
         curl_close($ch);
 

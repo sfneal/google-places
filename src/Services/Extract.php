@@ -1,11 +1,10 @@
 <?php
 
-namespace Sfneal\GooglePlaces;
+namespace Sfneal\GooglePlaces\Services;
 
-use Sfneal\Actions\AbstractService;
 use Sfneal\GooglePlaces\Actions\Traits\States;
 
-class Extract extends AbstractService
+class Extract
 {
     use States;
 

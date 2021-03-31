@@ -2,7 +2,7 @@
 
 namespace Sfneal\GooglePlaces\Tests;
 
-use Sfneal\GooglePlaces\Autocomplete;
+use Sfneal\GooglePlaces\Services\Autocomplete;
 
 class AutocompleteTest extends TestCase
 {

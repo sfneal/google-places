@@ -19,8 +19,8 @@
         "php": ">=7.1",
         "ext-curl": "*",
         "ext-json": "*",
-        "sfneal/actions": "^1.0",
-        "sfneal/controllers": "^1.0"
+        "sfneal/actions": "^2.0",
+        "sfneal/controllers": "^2.0"
     },
     "require-dev": {
         "orchestra/testbench": ">=3.8.0",

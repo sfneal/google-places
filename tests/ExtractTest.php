@@ -2,7 +2,7 @@
 
 namespace Sfneal\GooglePlaces\Tests;
 
-use Sfneal\GooglePlaces\Extract;
+use Sfneal\GooglePlaces\Services\Extract;
 
 class ExtractTest extends TestCase
 {

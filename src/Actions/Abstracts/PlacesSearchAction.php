@@ -2,10 +2,10 @@
 
 namespace Sfneal\GooglePlaces\Actions\Abstracts;
 
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 use Sfneal\GooglePlaces\Actions\CurlRequestAction;
 
-abstract class PlacesSearchAction extends AbstractAction
+abstract class PlacesSearchAction extends Action
 {
     /**
      * @var array Longitude & Latitude of the location biases (Milford, MA)
@@ -110,6 +110,6 @@ abstract class PlacesSearchAction extends AbstractAction
      */
     public function execute()
     {
-        return $this->parseResponse(CurlRequestAction::execute($this->getEndpoint()));
+        return $this->parseResponse((new CurlRequestAction($this->getEndpoint()))->execute());
     }
 }

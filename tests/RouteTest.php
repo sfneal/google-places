@@ -2,7 +2,7 @@
 
 namespace Sfneal\GooglePlaces\Tests;
 
-class LaravelTest extends TestCase
+class RouteTest extends TestCase
 {
     /** @test */
     public function city_route_can_be_accessed()

@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Tests;
+namespace Sfneal\GooglePlaces\Tests\Feature;
 
 use Sfneal\GooglePlaces\Services\Autocomplete;
+use Sfneal\GooglePlaces\Tests\TestCase;
 
 class AutocompleteTest extends TestCase
 {

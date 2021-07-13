@@ -1,6 +1,8 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Tests;
+namespace Sfneal\GooglePlaces\Tests\Feature;
+
+use Sfneal\GooglePlaces\Tests\TestCase;
 
 class RouteTest extends TestCase
 {

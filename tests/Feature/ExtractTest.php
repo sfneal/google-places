@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Tests;
+namespace Sfneal\GooglePlaces\Tests\Feature;
 
 use Sfneal\GooglePlaces\Services\Extract;
+use Sfneal\GooglePlaces\Tests\TestCase;
 
 class ExtractTest extends TestCase
 {

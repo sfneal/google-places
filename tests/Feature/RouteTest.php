@@ -1,8 +1,10 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Tests;
+namespace Sfneal\GooglePlaces\Tests\Feature;
 
-class LaravelTest extends TestCase
+use Sfneal\GooglePlaces\Tests\TestCase;
+
+class RouteTest extends TestCase
 {
     /** @test */
     public function city_route_can_be_accessed()

@@ -63,3 +63,8 @@ All notable changes to `google-places` will be documented in this file
 - bump sfneal/actions & sfneal/controllers min versions to 2.0
 - refactor `Autocomplete` & `Extract` into Services namespace
 - refactor `PlacesController` into Controllers namespace
+
+
+## 1.1.1 - 2021-07-13
+- refactor test classes into `Feature` & `Unit` namespaces
+- refactor `LaravelTest` to `RouteTest`

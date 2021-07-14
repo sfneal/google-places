@@ -25,7 +25,6 @@ class ConfigTest extends TestCase
 
         $this->assertNotNull($output);
         $this->assertIsString($output);
-        $this->assertStringContainsString(', ', $output);
         $this->assertEquals($expected, $output);
     }
 

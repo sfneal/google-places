@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\GooglePlaces\Tests\Feature;
-
 
 use Sfneal\GooglePlaces\Tests\TestCase;
 

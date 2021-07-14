@@ -9,7 +9,7 @@ return [
     | Provide a Google Places API key in order to execute places queries.
     |
     */
-    'api_key' => env('GOOGLE_API_KEY'),
+    'api_key' => env('GOOGLE_PLACES_API_KEY'),
 
     /*
     |--------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\GooglePlaces\Tests\Feature;
+namespace Sfneal\GooglePlaces\Tests\Unit;
 
 use Sfneal\GooglePlaces\Services\Extract;
 use Sfneal\GooglePlaces\Tests\TestCase;

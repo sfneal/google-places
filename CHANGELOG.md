@@ -68,3 +68,9 @@ All notable changes to `google-places` will be documented in this file
 ## 1.1.1 - 2021-07-13
 - refactor test classes into `Feature` & `Unit` namespaces
 - refactor `LaravelTest` to `RouteTest`
+
+
+## 1.2.0 - 2021-07-14
+- refactor `ExtractTest` & `AutocompleteTest` from `Feature` to `Unit` namespace
+- add encrypting of google places API variables in local & travis ci environments
+- make `ConfigTest` for testing config values

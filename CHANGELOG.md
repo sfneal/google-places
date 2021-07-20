@@ -77,4 +77,4 @@ All notable changes to `google-places` will be documented in this file
 
 
 ## 1.2.1 - 2021-07-20
-- add use of dataProviders for providing arrays of test params for city & zip tests
+- add use of `@dataProvider` for providing arrays of test params for city & zip tests

@@ -7,18 +7,26 @@ use Sfneal\GooglePlaces\Tests\TestCase;
 
 class AutocompleteTest extends TestCase
 {
-    /** @test */
-    public function city()
+    /**
+     * @test
+     * @dataProvider cityProvider
+     * @param string $query
+     * @param int $expectedResults
+     */
+    public function city(string $query, int $expectedResults)
     {
-        $this->contentAssertions(Autocomplete::city('franklin'), 5);
-        $this->contentAssertions(Autocomplete::city('02038'), 1);
-        $this->contentAssertions(Autocomplete::city('boston'), 5);
+        $this->contentAssertions(Autocomplete::city($query), $expectedResults);
     }
 
-    /** @test */
-    public function zip()
+    /**
+     * @test
+     * @dataProvider zipProvider
+     * @param string $query
+     * @param int $expectedResults
+     * @param array $contentKeys
+     */
+    public function zip(string $query, int $expectedResults, array $contentKeys)
     {
-        $this->contentAssertions(Autocomplete::zip('0203'), 4, ['id', 'text']);
-        $this->contentAssertions(Autocomplete::zip('02038'), 1, ['id', 'text']);
+        $this->contentAssertions(Autocomplete::zip($query), $expectedResults, $contentKeys);
     }
 }

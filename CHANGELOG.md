@@ -74,3 +74,7 @@ All notable changes to `google-places` will be documented in this file
 - refactor `ExtractTest` & `AutocompleteTest` from `Feature` to `Unit` namespace
 - add encrypting of google places API variables in local & travis ci environments
 - make `ConfigTest` for testing config values
+
+
+## 1.2.1 - 2021-07-20
+- add use of dataProviders for providing arrays of test params for city & zip tests

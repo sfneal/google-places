@@ -7,7 +7,7 @@ use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\GooglePlaces\Providers\GooglePlacesServiceProvider;
 
-class TestCase extends OrchestraTestCase
+abstract class TestCase extends OrchestraTestCase
 {
     /**
      * Define environment setup.
@@ -37,6 +37,35 @@ class TestCase extends OrchestraTestCase
     {
         return [
             GooglePlacesServiceProvider::class,
+        ];
+    }
+
+    /**
+     * Retrieve an array of 'city' query strings for autocomplete tests.
+     *
+     * @return array
+     */
+    public function cityProvider(): array
+    {
+        return [
+            ['franklin', 5],
+            ['02038', 1],
+            ['boston', 5],
+            ['new york', 5],
+        ];
+    }
+
+    /**
+     * Retrieve an array of 'zip' query strings for autocomplete tests.
+     *
+     * @return array
+     */
+    public function zipProvider(): array
+    {
+        return [
+            ['0203', 4, ['id', 'text']],
+            ['02038', 1, ['id', 'text']],
+            ['10001', 1, ['id', 'text']],
         ];
     }
 

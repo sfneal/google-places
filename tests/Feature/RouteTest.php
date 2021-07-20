@@ -6,17 +6,26 @@ use Sfneal\GooglePlaces\Tests\TestCase;
 
 class RouteTest extends TestCase
 {
-    /** @test */
-    public function city_route_can_be_accessed()
+    /**
+     * @test
+     * @dataProvider cityProvider
+     * @param string $query
+     * @param int $expectedResults
+     */
+    public function city_route_can_be_accessed(string $query, int $expectedResults)
     {
-        $this->responseAssertions(route('places.city', ['q' => 'franklin']), 5);
-        $this->responseAssertions(route('places.city', ['q' => 'boston']), 5);
-        $this->responseAssertions(route('places.city', ['q' => '02038']), 1);
+        $this->responseAssertions(route('places.city', ['q' => $query]), $expectedResults);
     }
 
-    /** @test */
-    public function zip_route_can_be_accessed()
+    /**
+     * @test
+     * @dataProvider zipProvider
+     * @param string $query
+     * @param int $expectedResults
+     * @param array $contentKeys
+     */
+    public function zip_route_can_be_accessed(string $query, int $expectedResults, array $contentKeys)
     {
-        $this->responseAssertions(route('places.zip', ['q' => '02038']), 1, ['id', 'text']);
+        $this->responseAssertions(route('places.zip', ['q' => $query]), $expectedResults, $contentKeys);
     }
 }
